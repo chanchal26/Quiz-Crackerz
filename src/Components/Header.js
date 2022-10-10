@@ -13,7 +13,7 @@ const Header = () => {
                         title="Company"
                         className="text-2xl font-bold uppercase"
                     >
-                        Quiz For Developers
+                        <span className='text-purple-600'>Quiz For Developers</span>
                     </Link>
                     <ul className=" items-center hidden space-x-8 lg:flex">
                         <li>
@@ -80,7 +80,7 @@ const Header = () => {
                                                 title="Company"
                                                 className="inline-flex items-center"
                                             >
-                                                <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                                                <span className="ml-2 text-xl font-bold tracking-wide text-purple-600 uppercase">
                                                     Quiz For Developers
                                                 </span>
                                             </Link>
@@ -141,9 +141,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div>
 
-            </div>
         </div>
     );
 };
