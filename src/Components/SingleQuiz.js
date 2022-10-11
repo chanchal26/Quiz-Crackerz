@@ -26,7 +26,7 @@ const SingleQuiz = ({ Question }) => {
             {
                 options.map((option, idx) => <p key={idx} ><button onClick={() => handleClick(option)} className='bg-gray-400 my-3 p-2 w-80 hover:bg-gray-700 text-stone-200'>{option}</button></p>)
             }
-
+            <p className={click ? `hidden` : `block`}><span className='text-xl font-semibold text-green-500'>{`Currect Ans : ${correctAnswer}`}</span></p>
         </div>
 
     );
