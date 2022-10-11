@@ -3,8 +3,9 @@ import { useLoaderData } from 'react-router-dom';
 import Language from './Language';
 
 const Home = () => {
+
     const language = useLoaderData();
-    console.log(language.data);
+
 
     return (
         <div>
