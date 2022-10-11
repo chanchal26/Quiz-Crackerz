@@ -4,7 +4,7 @@ import SingleQuiz from './SingleQuiz';
 
 const Quiz = () => {
     const allQuiz = useLoaderData();
-    const { name, id, total, questions } = allQuiz.data;
+    const { name, questions } = allQuiz.data;
     return (
         <div>
             <p className='my-5 text-3xl font-bold text-gray-500'>Quiz Of {name}</p>
