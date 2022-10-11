@@ -21,7 +21,18 @@ const Statistics = () => {
         }
     ]
     return (
-        <div></div>
+        <div className='flex justify-center mt-40'>
+
+            <BarChart width={550} height={250} data={data}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="Total Quiz" fill="#8884d8" />
+            </BarChart>
+
+        </div>
     );
 };
 
