@@ -5,7 +5,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div>
-            <div className="bg-blue-200 px-4 lg:px-28 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-full">
+            <div className="bg-blue-200 px-4 lg:px-28 py-5 mx-auto sm:max-w-full md:max-w-full lg:max-w-full">
                 <div className="relative flex items-center justify-between">
                     <Link
                         to='/'

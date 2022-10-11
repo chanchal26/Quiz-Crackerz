@@ -1,35 +1,21 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 
 const Statistics = () => {
-    const data = [
-        {
-            "name": "React",
-            "Total Quiz": 8
-        },
-        {
-            "name": "Javascript",
-            "Total Quiz": 9
-        },
-        {
-            "name": "CSS",
-            "Total Quiz": 8
-        },
-        {
-            "name": "Git",
-            "Total Quiz": 5
-        }
-    ]
+    const quiz = useLoaderData();
+    const { name, total } = quiz.data;
+
     return (
         <div className='flex justify-center mt-40'>
 
-            <BarChart width={550} height={250} data={data}>
+            <BarChart width={550} height={250} data={quiz.data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="Total Quiz" fill="#8884d8" />
+                <Bar dataKey="total" fill="#8884d8" />
             </BarChart>
 
         </div>
