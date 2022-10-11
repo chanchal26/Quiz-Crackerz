@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
+    const language = useLoaderData();
+
     return (
         <div>
             <div>
@@ -81,8 +84,30 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
-        </div>
+            <div className="relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
+                <div className="relative mx-auto max-w-7xl">
+                    <div className="grid max-w-lg gap-5 mx-auto lg:grid-cols-3 lg:max-w-none">
+                        {
+                            (language.data).map(quiz =>
+                                <div key={quiz.id} quiz={quiz} className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-slate-300">
+                                    <div className="flex-shrink-0">
+                                        <img className="object-cover w-full h-full" src={quiz.logo} alt="" />
+                                    </div>
+                                    <div className="flex flex-col justify-between flex-1 p-6 bg-white">
+                                        <div className="flex-1 justify-between items-center">
+                                            <div className='mb-4 text-3xl font-bold text-purple-600'>{quiz.name}</div>
+                                            <div>
+                                                <button className="px-8 py-3 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Start Quiz</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </div>
+                </div>
+            </div >
+        </div >
     );
 };
 

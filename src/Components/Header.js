@@ -75,7 +75,7 @@ const Header = () => {
                                     <div className="flex items-center justify-between mb-4">
                                         <div>
                                             <Link
-                                                href="/"
+                                                to="/"
                                                 aria-label="Company"
                                                 title="Company"
                                                 className="inline-flex items-center"
