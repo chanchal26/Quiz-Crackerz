@@ -8,7 +8,7 @@ const Statistics = () => {
 
     return (
         <div className='flex items-center justify-center mt-32'>
-            <ResponsiveContainer width={400} height={400}>
+            <ResponsiveContainer width="70%" height={400}>
                 <BarChart width={400} height={400} data={quiz.data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
